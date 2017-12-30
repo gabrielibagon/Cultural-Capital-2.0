@@ -10,7 +10,7 @@
 				overflow:hidden;
 				margin:0;
 			}
-			iframe {
+			video {
 				position:absolute;
 				display:block;
 				border:0;
@@ -42,16 +42,18 @@
 	</head>
 	<body>
 		<div id="load">LOADINGLOADINGLOADINGLOADINGLOADINGLOADING</div>
-		<div id="glass">
-			<iframe id="player" src="https://www.youtube.com/embed/-2wchpsLVXA?autoplay=1&showinfo=0&rel=0&controls=0&loop=1&disablekb=1&version=3&vq=hd1080"></iframe>
+ 		<div id="glass">
+			<video id='player' autoplay>
+				<source src='capital.mkv' type="video/mp4">
+			</video>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script>
 			$(function() {
 				$("#player").hide();
 				setTimeout(function() {
-					$('#player').delay(3250).fadeIn(6000);
-					$('#load').delay(2250).fadeOut(1000);
+					$('#player').delay(3250).fadeIn(7000);
+					$('#load').delay(2250).fadeOut(2000);
 				});
 			});
 		</script>
